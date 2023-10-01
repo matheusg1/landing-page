@@ -69,9 +69,10 @@ body {
 }
 
 
-.navbar-custom h1 {
+.navbar-custom h1 a{
+    color: var(--cor-slate-blue);
     font-size: 1.5rem;
-    margin-right: 2rem;
+    margin-right: 2rem;    
 }
 
 .navbar-list {
