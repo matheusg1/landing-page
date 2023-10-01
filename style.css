@@ -43,8 +43,9 @@
     --cor-green-dark: #8BBB8F;
     /* Verde Escuro */
     /* --cor-sky-blue-dark: #8BB8D3; Azul Celeste Escuro */
-    --cor-sky-blue-dark: #66899e;
+    /* --cor-sky-blue-dark: #66899e; */
     /* --cor-green-darker: #8CB386; Verde Escuro Mais Escuro */
+    --cor-blue: #4A5773;
     --cor-green-darker: #658060;
     --cor-slate-blue: #2d464c;
 
@@ -55,7 +56,8 @@
 }
 
 body {
-    background-color: var(--cor-sky-blue-dark);
+    background-color: var(--cor-blue);
+    /* background-color: ; */
     color: white;
 }
 
@@ -64,7 +66,7 @@ body {
     display: flex;
     align-items: center;
     color: var(--cor-slate-blue);
-    background-color: var(--cor-secondary);
+    background-color: var(--cor-blue-light);
     min-height: var(--navbar-altura);
 }
 
@@ -133,13 +135,13 @@ a {
     padding: 14px;
     border-radius: 65px;
     border: solid white 1px;
-    background-color: var(--cor-sky-blue-dark);
+    background-color: var(--cor-blue);
     transition: background-color 0.3s ease;
     transition: color 0.3s ease;
 }
 
 .botao-inicio:hover {
-    color: var(--cor-sky-blue-dark);
+    color: var(--cor-blue);
     border: none;
     background-color: white;
 }
@@ -255,7 +257,7 @@ a {
 }
 
 .texto-extra p:nth-child(2) {
-    color: var(--cor-slate-blue);
+    color: var(--cor-pink-light);
     font-size: 2.5rem;
 }
 
@@ -282,6 +284,9 @@ a {
     min-height: 80vh;
 }
 
+caption{
+    display: none;
+}
 .titulo-tabela {
     font-family: 'Mooli', sans-serif;
     margin: 6rem 0 4rem;
@@ -300,6 +305,8 @@ a {
 }
 
 .conteudo-tabela {
+    
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,12 +349,12 @@ th:hover {
 .conteudo-formulario {
     display: flex;
     align-items: center;
-    color: var(--cor-slate-blue);
-    background-color: var(--cor-green-light);
+    color: var(--cor-slate-blue);    
+    background-color: var(--cor-sky-blue);    
     border-radius: 4rem;
     padding: 3rem 2rem;
     width: 80vw;
-    min-height: 50vh;
+    min-height: 60vh;
     justify-content: space-between;
 }
 
@@ -395,8 +402,8 @@ th:hover {
     padding: .5rem;
     color: white;
     font-size: 1.5rem;
-    background-color: var(--cor-green-dark);
     height: 2rem;
+    background-color: var(--cor-blue);
     border: none;
     border-radius: .4rem;
     min-height: 3rem;
@@ -407,9 +414,10 @@ th:hover {
 }
 
 #formulario form button {
-    background-color: var(--cor-green-dark);
-    color: var(--cor-slate-blue);
+    background-color: var(--cor-blue);    
+    color: white;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     border: none;
