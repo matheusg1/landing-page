@@ -50,6 +50,9 @@
 
 
 }
+::selection {    
+    background-color: var(--cor-blue-dark);
+}
 
 body {
     background-color: var(--cor-sky-blue-dark);
@@ -73,10 +76,14 @@ body {
 
 .navbar-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar-item {
     margin-left: 1.5rem;
+}
+.navbar-item a{
+    color: var(--cor-slate-blue);
 }
 
 a {
@@ -96,16 +103,19 @@ a {
     font-family: 'Mooli', sans-serif;
     margin: 0 20rem 0 20rem;
     line-height: 4.5rem;
-    font-size: 4rem;
     text-align: center;
 }
 
-.texto-inicio:last-of-type {
+.texto-inicio p:first-child {
+    font-size: 4rem;
+}
+
+.texto-inicio p:nth-child(2) {
     color: var(--cor-peach-light);
-    font-family: 'Mooli', sans-serif;
-    text-align: center;
     padding: .5rem 0 0;
     font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
 }
 
 .botoes-inicio {
@@ -220,7 +230,7 @@ a {
 }
 
 #extra {
-    min-height: 70vh !important;
+    min-height: 100vh !important;
     display: flex;
     justify-content: center;
 }
@@ -243,7 +253,7 @@ a {
     margin-top: 1rem;
 }
 
-.texto-extra:last-of-type {
+.texto-extra p:nth-child(2) {
     color: var(--cor-slate-blue);
     font-size: 2.5rem;
 }
@@ -271,6 +281,23 @@ a {
     min-height: 80vh;
 }
 
+.titulo-tabela {
+    font-family: 'Mooli', sans-serif;
+    margin: 6rem 0 4rem;
+    text-align: center;
+    line-height: 4.5rem;
+}
+
+.titulo-tabela h2 {
+    color: var(--cor-pink-light);
+    font-size: 4rem;
+}
+
+.titulo-tabela p {
+    color: white;
+    font-size: 2.5rem;
+}
+
 .conteudo-tabela {
     display: flex;
     flex-direction: column;
@@ -284,20 +311,7 @@ a {
     font-weight: 200;
 }
 
-.titulo-tabela{    
-    font-family: 'Mooli', sans-serif;    
-    margin: 6rem 0 4rem;
-    text-align: center;
-    line-height: 4.5rem;
-}
-.titulo-tabela h2 {
-    color: var(--cor-pink-light);
-    font-size: 4rem;
-}
-.titulo-tabela p {    
-    color: white;
-    font-size: 2.5rem;        
-}
+
 
 th {
     text-align: start;
@@ -328,7 +342,7 @@ th:hover {
     display: flex;
     align-items: center;
     color: var(--cor-slate-blue);
-    background-color: var(--cor-pink-dark);
+    background-color: var(--cor-green-light);
     border-radius: 4rem;
     padding: 3rem 2rem;
     width: 80vw;
@@ -342,7 +356,6 @@ th:hover {
     width: 40%;
 }
 
-
 #formulario h2 {
     visibility: hidden;
     font-weight: 200;
@@ -352,7 +365,6 @@ th:hover {
 }
 
 .texto-formulario {
-
     font-family: 'Mooli', sans-serif;
     display: flex;
     flex-direction: column;
@@ -362,15 +374,13 @@ th:hover {
 }
 
 .texto-formulario p:last-child {
-    color: var(--cor-pink-light);
+    color: var(--cor-green-darker);
 }
-
 
 
 #formulario form label {
-    font-size: 1.8rem;    
+    font-size: 1.8rem;
 }
-
 
 #formulario form label,
 #formulario form input,
@@ -380,9 +390,11 @@ th:hover {
 
 #formulario form input,
 #formulario form textarea {
-    color: var(--cor-slate-blue);
+    font-family: 'Poppins', sans-serif;
+    padding: .5rem;
+    color: white;
     font-size: 1.5rem;
-    background-color: var(--cor-pink-light);
+    background-color: var(--cor-green-dark);
     height: 2rem;
     border: none;
     border-radius: .4rem;
@@ -394,7 +406,7 @@ th:hover {
 }
 
 #formulario form button {
-    background-color: var(--cor-pink-light);
+    background-color: var(--cor-green-dark);
     color: var(--cor-slate-blue);
     cursor: pointer;
     font-size: 1.5rem;
@@ -404,543 +416,170 @@ th:hover {
     min-height: 3rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.navbar-item {
-    font-size: 1rem;
-    display: inline-block;
-    padding: .6rem;
-}
-
-.navbar-item a {
-    color: var(--cor-slate-blue);
-    text-decoration: none;
-}
-
-.inicio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: calc(100vh - var(--navbar-altura));
-}
-
-.texto-inicio {
-    font-family: 'Mooli', sans-serif;
-    margin: 0 20rem 0 20rem;
-    line-height: 5rem;
-    font-size: 4rem;
-    text-align: center;
-}
-
-.texto-inicio-2 {
-    color: var(--cor-peach-light);
-    font-family: 'Mooli', sans-serif;
-    text-align: center;
-    padding: 20px 0px;
-    font-size: 1.6rem;
-}
-
-.botoes-inicio {
-    margin-top: 1rem;
-    display: flex;
-}
-
-.botao-inicio {
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 0 20px;
-    width: 150px;
-    padding: 14px;
-    border-radius: 65px;
-    border: solid white 1px;
-    background-color: var(--cor-sky-blue-dark);
-    transition: background-color 0.3s ease;
-    transition: color 0.3s ease;
-}
-
-.botao-inicio:hover {
-    color: var(--cor-sky-blue-dark);
-    border: none;
-    background-color: white;
-}
-
-
-.figure-1 {
-    color: white;
-    font-family: 'Mooli', sans-serif;
-    font-size: 2.3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.figure-1 img {
-    margin-bottom: 2rem;
-    border-radius: 6rem;
-    width: 60vw;
-}
-
-.meio {
-    font-size: 2.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: calc(100vh);
-}
-
-.balloon {
-    position: absolute;
-    top: -8rem;
-    left: -5rem;
-}
-
-.conteudo-meio {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 60vw;
-    background-color: var(--cor-peach-light);
-    padding: 16rem 2rem 12rem 2rem;
-    border-radius: 5rem;
-}
-
-.texto-meio {
-    color: var(--cor-slate-blue);
-    text-align: center;
-    z-index: 1;
-    padding-bottom: 50px;
-    line-height: 3.5rem;
-}
-
-.botoes-meio {
-
-    display: flex;
-}
-
-.botao-meio {
-    color: var(--cor-slate-blue);
-    font-weight: 600;
-    cursor: pointer;
-    margin: 0 20px;
-    width: 150px;
-    padding: 14px;
-    border-radius: 65px;
-    border: solid var(--cor-slate-blue) 1px;
-    background-color: var(--cor-peach-light);
-    transition: background-color 0.3s ease;
-    transition: color 0.3s ease;
-}
-
-.botao-meio:hover {
-    color: var(--cor-peach-light);
-    border: none;
-    background-color: var(--cor-slate-blue);
-}
-
-.fim {
-    min-height: 80vh !important;
-    display: flex;
-    justify-content: center;
-}
-
-.conteudo-fim {
-    display: flex;
-    align-items: center;
-    width: 70vw;
-}
-
-.background-fim {
-    border-radius: 4rem;
-    padding: 5rem;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-}
-
-.texto-fim {
+.footer-texto{
     color: var(--cor-cream);
-    font-family: 'Mooli', sans-serif;
-    font-size: 2.2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: 2rem;
-    margin-top: 4.5rem;
-}
-
-.texto-fim :last-child {
-    color: var(--cor-slate-blue);
-}
-
-.texto-fim p {
-    margin-bottom: 1rem;
-}
-
-.headphone {
-    border-radius: 30rem;
-    width: 20rem;
-    transition: filter 0.6s ease-in-out;
-    cursor: pointer;
-}
-
-.headphone:hover {
-    filter: hue-rotate(200deg);
-}
-
-
-.tabela-div {
-    margin-top: 12rem;
-    display: flex;
-    justify-content: center;
-    min-height: 70vh;
-}
-
-.tabela {
-    border: solid var(--cor-green-dark) 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    border-radius: 4rem;
-    width: 80vw;
-}
-
-.tabela h2 {    
-    font-weight: 200;
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin: 2rem 0;
-}
-
-table {
-    font-size: 2rem;
-    font-weight: 200;
-}
-
-th {
-    text-align: start;
-    font-weight: 300;
-}
-
-td,
-th {
-    border-bottom: .1rem solid var(--cor-green-dark);
-    width: 20rem;
-    padding: 10px;
-}
-
-td:hover,
-th:hover {
-    color: var(--cor-green-light);
-}
-
-.formulario-div {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.formulario {
-    display: flex;
-    align-items: center;
-    color: var(--cor-slate-blue);
-    background-color: var(--cor-pink-dark);
-    border-radius: 4rem;
-    padding: 3rem 2rem;
-    width: 80vw;
-    min-height: 50vh;
-    justify-content: space-between;
-}
-
-.formulario-div h2 {    
-    font-weight: 200;
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.formulario-texto {
-    font-family: 'Mooli', sans-serif;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 3rem;
-    width: 50%;
-}
-
-.formulario-texto p:last-child {
-    color: var(--cor-pink-light);
-}
-
-.formulario form {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-
-.formulario form label {
-    font-size: 1.8rem;
-    margin-bottom: .4rem;
-}
-
-.formulario form input,
-.formulario form textarea {
-    color: var(--cor-slate-blue);
-    font-size: 1.5rem;
-    background-color: var(--cor-pink-light);    
-    height: 2rem;
-    border: none;
-    border-radius: .4rem;
-    margin-bottom: .5rem;
-}
-
-.formulario form textarea {
-    min-height: 9rem;
-}
-
-.formulario form button {
-    background-color: var(--cor-pink-light);
-    color: var(--cor-slate-blue);    
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: 400;
-    border: none;
-    border-radius: .4rem;
-    min-height: 3.2rem;
-}
-
-footer {
-    font-size: 1rem;
-    border-top: solid var(--cor-pink-light) 1px;
     display: flex;
     flex-direction: column;
     align-items: end;
-    color: var(--cor-pink-light);
-}
-
-.texto-footer {
-    margin: 1rem .5rem;
+    margin: .5rem 1rem;
     line-height: 1.3rem;
 }
-
-.texto-footer p a {
-    color: var(--cor-cream-dark);
-    text-decoration: none;
-    margin: 1rem 0;
+.footer-texto a{
+    color: var(--cor-green-light);
 }
 
-@media (min-width: 577px) and (max-width: 1200px) {
+/* @media (min-width: 577px) and (max-width: 1200px) { */
+@media (max-width: 1200px) {
 
     .texto-inicio {
-        margin: 0 0 0 0rem;
-        line-height: 4rem;
+        margin: 0;
         font-size: 2.5rem;
-        text-align: center;
     }
 
-    .figure-1 {
+    .texto-inicio p:first-child {
+        font-size: 3rem;
+    }
+
+    .texto-inicio p:nth-child(2) {
         font-size: 1.5rem;
     }
 
-    .figure-1 img {
-        margin-bottom: 1rem;
-        width: 70vw;
-        border-radius: 4rem;
-    }
 
-    .conteudo-meio {
-        width: 90vw;
-        padding: 12rem 2rem 10rem 2rem;
-        margin: 0 2rem;
-        border-radius: 4rem;
+    .conteudo-meio img {
+        width: 80vw;
     }
 
     .balloon {
         width: 30vw;
-        top: -2rem;
+        top: -15%;
     }
 
     .conteudo-fim {
-        width: 90vw;
+        width: 80vw;
     }
 
-    .background-fim {
-        padding: 2rem 1rem;
-    }
-
-    .texto-fim {
-        font-size: 1.8rem;
-    }
 
     .headphone {
-        width: 15rem;
+        width: 25rem;
     }
 
-    .tabela {
-        width: 100vw;
-        border-left: none;
-        border-right: none;
-        border-radius: 0;
+    .conteudo-extra {
+        flex-direction: column;
     }
 
-    .formulario-texto {
-        font-size: 2.3rem;
+    .texto-extra {
+        margin-top: 2.5rem;
+    }
+
+
+    .titulo-tabela h2 {
+        font-size: 3rem;
+    }
+
+    .titulo-tabela p {
+        font-size: 1.5rem;
+    }
+
+
+    .conteudo-formulario {
+        flex-direction: column;
+    }
+
+    .texto-formulario {
+        font-size: 2rem;
+        width: auto;
+    }
+
+    .texto-formulario {
+        width: auto;
+    }
+
+    .conteudo-formulario form {
+        text-align: center;
+        margin-top: 2rem;
+        width: 90%;
     }
 
 }
 
 @media (max-width: 576px) {
 
-    .navbar-custom {
-        padding: 0 0rem;
+    /* .navbar-custom {
+        padding: 0 0;
+        display: flex;
         flex-direction: column;
-    }
+        align-items: start;
+    } */
 
     .texto-inicio {
-        font-family: 'Mooli', sans-serif;
-        padding: 0;
         margin: 0;
-        line-height: 1.5;
-        font-size: 2rem;
-        text-align: center;
+        font-size: 2.5rem;
     }
 
-    .texto-inicio-2 {
-        text-align: center;
-        font-family: 'Mooli', sans-serif;
-        padding: 20px 0px;
-        font-size: 1rem;
+    .texto-inicio p:first-child {
+        font-size: 3rem;
     }
 
-    .botao-inicio {
-        font-size: .9rem;
+    .texto-inicio p:nth-child(2) {
+        font-size: 1.5rem;
     }
 
-    .figure-1 {
-        font-size: 1.4rem;
-    }
-
-    .figure-1 img {
-        margin-bottom: .5rem;
-        width: 100vw;
-        border-radius: 0px;
-    }
-
-    .texto-meio {
-        font-size: 2rem;
-    }
-
-    .conteudo-meio {
-        margin: 0;
-        width: 100vw;
-        padding: 100px 0px 75px 0px;
-        border-radius: 0px;
-    }
-
-    .botao-meio {
-        font-size: .9rem;
-    }
 
     .balloon {
         width: 40vw;
-        top: -2rem;
-        left: -3rem;
+        /* top: -2rem; */
+        top: -5%;
     }
 
-    .conteudo-fim {
+    .conteudo-meio img,
+    .conteudo-fim,
+    .conteudo-formulario {
         width: 100vw;
-    }
-
-    .background-fim {
-        display: flex;
-        flex-direction: column;
-        border-radius: 0rem;
-        padding: 1rem 0 0 0;
-    }
-
-    .texto-fim {
-        margin: 1rem 0;
-        font-size: 1.4rem;
-    }
-
-    .headphone {
-        width: 15rem;
-    }
-
-    .tabela-div {
-        margin-top: 6rem;
-    }
-
-    .tabela {
-        border-left: none;
-        border-right: none;
         border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-
-    .formulario {
-        flex-direction: column;
-        border-radius: 0;
-        padding: 0;
-        width: 100vw;
-        margin-bottom: 2rem;
-    }
-
-    .formulario-texto p:last-child {
-        margin-top: .5rem;
-    }
-
-    .formulario-div h2 {
-        margin-top: 7rem;
+    .texto-extra {
+        margin-top: 2.5rem;
         font-size: 2rem;
     }
 
-    .formulario-texto {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 1.5rem 0;
+    .texto-extra p:nth-child(2) {
+        color: var(--cor-slate-blue);
         font-size: 1.8rem;
-        width: 90%;
     }
 
-    .formulario form {
-        width: 90%;
+    .titulo-tabela {
+        line-height: 2rem;
         margin-bottom: 2rem;
     }
 
-
-    footer {        
-        text-align: center;
-        align-items: center;        
+    .titulo-tabela h2 {
+        font-size: 2rem;
     }
-} */
+
+    .titulo-tabela p {
+        font-size: 1rem;
+    }
+
+    #tabela {
+        margin-top: 0;
+    }
+
+    .conteudo-tabela {
+        font-size: 1.5rem;
+    }
+
+    .conteudo-formulario {
+        padding: 3rem 0;
+    }
+
+    .texto-formulario {
+        font-size: 1.6rem;
+    }
+
+    .texto-formulario:first-child {
+        font-size: 2rem;
+    }
+}
