@@ -425,7 +425,7 @@ th:hover {
 }
 
 .footer-texto{
-    color: var(--cor-cream);
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -433,7 +433,8 @@ th:hover {
     line-height: 1.3rem;
 }
 .footer-texto a{
-    color: var(--cor-green-light);
+    color: rgb(236, 236, 236);
+    /* color: var(--cor-pink-light); */
 }
 
 /* @media (min-width: 577px) and (max-width: 1200px) { */
