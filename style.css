@@ -51,7 +51,8 @@
 
 
 }
-::selection {    
+
+::selection {
     background-color: var(--cor-blue-dark);
 }
 
@@ -70,10 +71,10 @@ body {
 }
 
 
-.navbar-custom h1 a{
+.navbar-custom h1 a {
     color: var(--cor-slate-blue);
     font-size: 1.5rem;
-    margin-right: 2rem;    
+    margin-right: 2rem;
 }
 
 .navbar-list {
@@ -84,7 +85,8 @@ body {
 .navbar-item {
     margin-left: 1.5rem;
 }
-.navbar-item a{
+
+.navbar-item a {
     color: var(--cor-slate-blue);
 }
 
@@ -239,6 +241,7 @@ a {
 
 .conteudo-extra {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 70vw;
 }
@@ -283,9 +286,10 @@ a {
     min-height: 80vh;
 }
 
-caption{
+caption {
     display: none;
 }
+
 .titulo-tabela {
     font-family: 'Mooli', sans-serif;
     margin: 6rem 0 4rem;
@@ -304,7 +308,7 @@ caption{
 }
 
 .conteudo-tabela {
-    
+
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
     display: flex;
     flex-direction: column;
@@ -348,8 +352,8 @@ th:hover {
 .conteudo-formulario {
     display: flex;
     align-items: center;
-    color: var(--cor-slate-blue);    
-    background-color: var(--cor-sky-blue);    
+    color: var(--cor-slate-blue);
+    background-color: var(--cor-sky-blue);
     border-radius: 4rem;
     padding: 3rem 2rem;
     width: 80vw;
@@ -381,7 +385,7 @@ th:hover {
 }
 
 .texto-formulario p:last-child {
-    color: var(--cor-green-darker);    
+    color: var(--cor-green-darker);
 }
 
 
@@ -424,7 +428,7 @@ th:hover {
     min-height: 3rem;
 }
 
-.footer-texto{
+.footer-texto {
     color: white;
     display: flex;
     flex-direction: column;
@@ -432,7 +436,8 @@ th:hover {
     margin: .5rem 1rem;
     line-height: 1.3rem;
 }
-.footer-texto a{
+
+.footer-texto a {
     color: rgb(236, 236, 236);
     /* color: var(--cor-pink-light); */
 }
@@ -513,16 +518,10 @@ th:hover {
 
 @media (max-width: 576px) {
 
-    /* .navbar-custom {
-        padding: 0 0;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    } */
-
+    
     .texto-inicio {
         margin: 0;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .texto-inicio p:first-child {
@@ -542,6 +541,7 @@ th:hover {
 
     .conteudo-meio img,
     .conteudo-fim,
+    .conteudo-extra,
     .conteudo-formulario {
         width: 100vw;
         border-radius: 0;
@@ -549,8 +549,16 @@ th:hover {
         padding-right: 0;
     }
 
+    .conteudo-extra {
+        width: 100vw;
+    }
+
+    .headphone {        
+        width: 90vw;
+    }
+
     .texto-extra {
-        margin-top: 2.5rem;
+        margin: 2.5rem 0;
         font-size: 2rem;
     }
 
