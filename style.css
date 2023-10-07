@@ -52,6 +52,24 @@
 
 }
 
+@media (max-width: 577px) {
+
+    .navbar-custom h1{
+        font-weight: 600;
+    }
+    .navbar-custom,
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-item {
+        font-size: 1.2rem;
+        margin-top: .7rem;
+        margin-left: 0px !important;
+    }
+}
+
 ::selection {
     background-color: var(--cor-blue-dark);
 }
@@ -518,7 +536,7 @@ th:hover {
 
 @media (max-width: 576px) {
 
-    
+
     .texto-inicio {
         margin: 0;
         font-size: 2rem;
@@ -553,7 +571,7 @@ th:hover {
         width: 100vw;
     }
 
-    .headphone {        
+    .headphone {
         width: 90vw;
     }
 
